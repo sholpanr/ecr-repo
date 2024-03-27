@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket                  = "tf-state-aksholpan"
+    bucket                  = "tf-state-aksholpan-2"
     key                     = "my-terraform-project"
     region                  = "us-east-1"
     # shared_credentials_file = "~/.aws/credentials"
