@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket                  = "tf-state-aksholpan-2"
-    key                     = "my-terraform-project"
-    region                  = "us-east-1"
-    dynamodb_table          = "tf-locks-aksholpan-2"
+    bucket = "tf-state-aksholpan-2"
+    key    = "my-terraform-project"
+    region = "us-east-1"
+    # dynamodb_table          = "tf-locks-aksholpan-2"
     # shared_credentials_file = "~/.aws/credentials"
   }
 }
@@ -35,13 +35,13 @@ terraform {
 
 
 provider "aws" {
-    region = "us-east-1"
-    # access_key = var.AWS_ACCESS_KEY_ID
-    # secret_key = var.AWS_SECRET_ACCESS_KEY
+  region = "us-east-1"
+  # access_key = var.AWS_ACCESS_KEY_ID
+  # secret_key = var.AWS_SECRET_ACCESS_KEY
 }
 
 resource "aws_ecr_repository" "my_ecr_repo" {
-  name                 = "nodejs-app" 
+  name                 = "nodejs-app"
   image_tag_mutability = "IMMUTABLE"
 
   image_scanning_configuration {
