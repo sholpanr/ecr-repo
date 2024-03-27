@@ -3,6 +3,7 @@ terraform {
     bucket                  = "tf-state-aksholpan-2"
     key                     = "my-terraform-project"
     region                  = "us-east-1"
+    dynamodb_table          = "tf-locks-aksholpan-2"
     # shared_credentials_file = "~/.aws/credentials"
   }
 }
